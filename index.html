@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Bank App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <div class="bg-white p-6 rounded shadow-md">
+            <h1 class="text-2xl font-bold mb-4">Flower Bank App</h1>
+            <div id="dashboard">
+                <div class="mb-4">
+                    <span class="text-lg">Current Balance: </span>
+                    <span id="balance" class="text-lg font-bold">$0</span>
+                </div>
+                <button id="addMoneyBtn" class="bg-green-500 text-white px-4 py-2 rounded mr-2">Add Money</button>
+                <button id="withdrawMoneyBtn" class="bg-red-500 text-white px-4 py-2 rounded mr-2">Withdraw Money</button>
+                <button id="transactionHistoryBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Transaction History</button>
+            </div>
+            <div id="addMoneyForm" class="hidden mt-4">
+                <input type="number" id="addAmount" class="border p-2 rounded w-full mb-2" placeholder="Enter amount to add">
+                <button id="confirmAddBtn" class="bg-green-500 text-white px-4 py-2 rounded">Confirm</button>
+            </div>
+            <div id="withdrawMoneyForm" class="hidden mt-4">
+                <input type="number" id="withdrawAmount" class="border p-2 rounded w-full mb-2" placeholder="Enter amount to withdraw">
+                <button id="confirmWithdrawBtn" class="bg-red-500 text-white px-4 py-2 rounded">Confirm</button>
+            </div>
+            <div id="transactionHistory" class="hidden mt-4">
+                <h2 class="text-xl font-bold mb-2">Transaction History</h2>
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                        <th class="py-2">Date</th>
+                        <th class="py-2">Type</th>
+                        <th class="py-2">Amount</th>
+                        <th class="py-2">Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionTableBody">
+                    <!-- Transactions will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
